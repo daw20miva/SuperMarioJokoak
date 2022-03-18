@@ -32,7 +32,7 @@
 <div class="container items-align-center">
 <div class="row">
     <div class="col-sm-12">
-      <h1 style="font-size:80px;">Admistrazio gunea</h1>
+    <a style="text-decoration:none;" href="../index.html"><h1 style="font-size:80px;">Admistrazio gunea</h1></a>
       <br>
       
     </div>
