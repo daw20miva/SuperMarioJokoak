@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasiera</title>
+
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://uploads-ssl.webflow.com/5b13df51d0d5fe8211f203da/css/okalpha-website.webflow.b889452ac.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+   <script>gsap.registerPlugin(ScrollTrigger);
+    // REVEAL //
+    gsap.utils.toArray(".revealUp").forEach(function (elem) {
+      ScrollTrigger.create({
+        trigger: elem,
+        start: "top 80%",
+        end: "bottom 20%",
+        markers: true,
+        onEnter: function () {
+          gsap.fromTo(
+            elem,
+            { y: 100, autoAlpha: 0 },
+            {
+              duration: 1.25,
+              y: 0,
+              autoAlpha: 1,
+              ease: "back",
+              overwrite: "auto"
+            }
+          );
+        },
+        onLeave: function () {
+          gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+        },
+        onEnterBack: function () {
+          gsap.fromTo(
+            elem,
+            { y: -100, autoAlpha: 0 },
+            {
+              duration: 1.25,
+              y: 0,
+              autoAlpha: 1,
+              ease: "back",
+              overwrite: "auto"
+            }
+          );
+        },
+        onLeaveBack: function () {
+          gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+        }
+      });
+    });
+    </script>
+   <style>
+       body{
+        background-image: url("images/bg_stripe.png");
+  background-repeat:repeat;
+       }
+    
+
+
+.info,
+
+
+.info {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+@font-face {
+  font-family: Nhas;
+  src: url(Nhas.ttf);
+}
+
+h1{
+    font-family: Nhas;
+}
+
+
+.panel-content {
+  align-content: center;
+  background: rgba(3, 18, 27, 0.26);
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+header {
+  align-items: center;
+  background: linear-gradient(-45deg, #03121b, #07273b);
+  color: #fff;
+  display: flex;
+  height: 100px;
+  left: 0;
+  padding: 0 10%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+.container {
+  overflow: hidden;
+  padding-top: 1%;
+}
+.container .slider {
+  animation: slidein 30s linear infinite;
+  white-space: nowrap;
+}
+.container .slider .logos {
+  width: 100%;
+  display: inline-block;
+  margin: 0px 0;
+}
+.container .slider .logos .fab {
+  width: calc(100% / 5);
+  animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+}
+#slider-text img{
+  width: 1000px;
+}
+.container img{
+	max-width:250px;
+  margin-left: 20px;
+}
+
+@keyframes slidein {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.Iam {
+  padding: 2em 5em;
+  font: normal 40px/50px Montserrat, sans-serif;
+  color: rgb(245, 0, 0);
+}
+.Iam p {
+  height: 50px;
+  float: left;
+  margin-right: 0.3em;
+}
+.Iam b {
+  float: left;
+  overflow: hidden;
+  position: relative;
+  height: 50px;
+  top: 40px;
+}
+.Iam .innerIam {
+  display: inline-block;
+  color: #e74c3c;
+  position: relative;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+
+
+/*animation*/
+-webkit-animation:move 5s;
+   -moz-animation:move 5s;
+    -ms-animation:move 5s;
+     -o-animation:move 5s;
+        animation:move 5s;
+/*animation-iteration-count*/
+-webkit-animation-iteration-count:1;
+   -moz-animation-iteration-count:1;
+    -ms-animation-iteration-count:1;
+     -o-animation-iteration-count:1;
+        animation-iteration-count:1;
+/*animation-delay*/
+-webkit-animation-delay:1s;
+   -moz-animation-delay:1s;
+    -ms-animation-delay:1s;
+     -o-animation-delay:1s;
+        animation-delay:1s;
+}
+@keyframes move{
+0%  { top: 0px; }
+20% { top: -50px; }
+40% { top: -100px; }
+60% { top: -150px; }
+80% { top: -200px; }
+}
+
+@-webkit-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+@-moz-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+@-o-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+@keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+/* coloress en en texto en movimiento */
+.animate-charcter
+{
+  background-image: linear-gradient(
+    -225deg,
+    #0026ff 0%,
+    #ff0000 29%,
+    #13ff13 67%,
+    #fff800 100%
+  );
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 10s linear infinite;
+  display: inline-block;
+
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #d4d4d4;
+  --color-secondary: #969696;
+  --color-tertiary: #707070;
+  --color-quaternary: #414141;
+  --color-quinary: #1f1f1f;
+  /*
+  --color-primary: #5192ED;
+  --color-secondary: #69A1F0;
+  --color-tertiary: #7EAEF2;
+  --color-quaternary: #90BAF5;
+  --color-quinary: #A2C4F5;
+  */
+}
+
+
+
+
+.text_shadows {
+  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  font-family: bungee, sans-serif;
+  font-weight: 400;
+  font-size: calc(2rem + 5vw);
+  text-align: center;
+  color: var(--color-primary);
+  -webkit-animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+          animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+  letter-spacing: 0.4rem;
+}
+
+@-webkit-keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  20% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary);
+  }
+  30% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  40% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  20% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary);
+  }
+  30% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  40% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+@-webkit-keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-12px, -12px);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+  }
+  60% {
+    transform: translate(-12px, -12px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-12px, -12px);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+  }
+  60% {
+    transform: translate(-12px, -12px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+/*
+** Apply styles to the parent element
+*/
+.Words {
+  margin: 0 auto;
+  padding: 80px 0;
+  font-size: 68px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  transform: translate3d(0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+
+  -webkit-text-size-adjust: 100%;
+}
+
+/*
+** Apply common styles to each line of text
+*/
+.Words-line {
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+}
+.Words-line:nth-child(odd) {
+  transform: skew(60deg, -30deg) scaleY(0.66667);
+}
+.Words-line:nth-child(even) {
+  transform: skew(0deg, -30deg) scaleY(1.33333);
+}
+.Words-line:nth-child(1) {
+  left: 29px;
+}
+.Words-line:nth-child(2) {
+  left: 58px;
+}
+.Words-line:nth-child(3) {
+  left: 87px;
+}
+.Words-line:nth-child(4) {
+  left: 116px;
+}
+.Words-line:nth-child(5) {
+  left: 145px;
+}
+.Words-line:nth-child(6) {
+  left: 174px;
+}
+.Words-line:nth-child(7) {
+  left: 203px;
+}
+
+/*
+** Fine-grained text styles
+*/
+#escaleras p {
+  height: 50px;
+  line-height: 45px;
+  padding: 0 10px;
+  transition: all 0.4s ease-in-out;
+  transform: translate3d(0, 0, 0);
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.mexiwave [data-scroll='in'] .char {
+  -webkit-animation: wave 0.25s calc(var(--char-index) * 0.1s) ease;
+          animation: wave 0.25s calc(var(--char-index) * 0.1s) ease;
+}
+@-webkit-keyframes wave {
+  50% {
+    transform: translate(0, -50%);
+  }
+}
+@keyframes wave {
+  50% {
+    transform: translate(0, -50%);
+  }
+}
+.text__container {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  font-size: var(--font-size);
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  font-weight: 300;
+  text-align: center;
+  width: 100vw;
+}
+/*
+** The hover interaction
+*/
+.Words:hover p {
+  transform: translate3d(0, -50px, 0);
+}
+span {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.plata img{
+  max-width: 105px;
+}
+
+.pegi img{
+  float:right;
+  max-width: 100px;
+}
+
+button {
+ background-color: rgb(255, 205, 205);
+ z-index: 1;
+ position: relative;
+ overflow: hidden;
+ color: red;
+ border: 3px solid red;
+ padding: 10px 20px;
+ font-family: Arial;
+ font-weight: 800;
+ font-size: 1.05em;
+ border-radius: 15px;
+ transition: transform .3s ease, color .5s ease;
+}
+
+button::before {
+ content: '';
+ inset: 0 0 0 0;
+ margin: auto;
+ height: 0px;
+ width: 0px;
+ position: absolute;
+ background-color: red;
+ z-index: -1;
+ border-radius: 50%;
+ transition: all .7s ease;
+}
+
+button:active {
+ transform: scale(.9);
+}
+
+button:hover {
+ color: #fff;
+}
+
+button:hover:before {
+ height: 200px;
+ width: 200px;
+}
+
+
+
+    </style>
+</head>
+<body onload="Salduena();">
+    
+
+    <section id="slider">
+        <div id="content-images-slider">
+            <div class="image-slider rellax" data-rellax-speed="-10" style='background-image: url(images/slider-4.png)'></div>
+            <div class="image-slider rellax" data-rellax-speed="-6" style='background-image: url(images/slider-3.png)'></div>
+            <div class="text-slider rellax" data-rellax-speed="-10">
+                <div id='slider-text'><img src="images/super_mario_jolasak.png"  style="max-width: 550px;"></div>
+            </div>
+            <div class="image-slider rellax" data-rellax-speed="-4" style='background-image: url(images/slider-2.png)'></div>
+            <div class="image-slider" style='background-image: url(images/slider-1.png)'></div>
+        </div>
+    </section>
+    <img src="images/bg_block.png" style="background-repeat:repeat-x;">
+    <nav style="background-color: #fff; padding-bottom: 15px;">
+        <div id="logo"></div>
+        <div class="bg">
+            <div class="el">
+        <ul>
+
+            <li><a href="index.html">Hasiera</a></li>
+            <li><a href="produktuak/">Jokoak</a></li>
+            <li><a href="kontaktua.html">Kontaktua</a></li>
+        </ul>
+    </div>
+    </nav>
+    <div class="container ">
+        <div class="row align-items-center ">
+          <div class="container rounded">
+            <div class="slider">
+              <div class="logos">
+                <a><img src="images/1-1.png"></a>
+                <a><img src="images/2-2.png"></a>
+                <a><img src="images/3-3.png"></a>
+                <a><img src="images/4-4.png"></a>
+                <a><img src="images/5-5.png"></a>
+                <a><img src="images/6-6.png"></a>
+                <a><img src="images/7-7.png"></a>
+                <a><img src="images/1-1.png"></a>
+                <a><img src="images/2-2.png"></a>
+                <a><img src="images/3-3.png"></a>
+                <a><img src="images/4-4.png"></a>
+                <a><img src="images/5-5.png"></a>
+                <a><img src="images/6-6.png"></a>
+                <a><img src="images/7-7.png"></a>
+                <a><img src="images/1-1.png"></a>
+                <a><img src="images/2-2.png"></a>
+                <a><img src="images/3-3.png"></a>
+                <a><img src="images/4-4.png"></a>
+                <a><img src="images/5-5.png"></a>
+                <a><img src="images/6-6.png"></a>
+                <a><img src="images/7-7.png"></a>
+                <a><img src="images/1-1.png"></a>
+                <a><img src="images/2-2.png"></a>
+                <a><img src="images/3-3.png"></a>
+                <a><img src="images/4-4.png"></a>
+                <a><img src="images/5-5.png"></a>
+                <a><img src="images/6-6.png"></a>
+                <a><img src="images/7-7.png"></a>
+                <a><img src="images/1-1.png"></a>
+                <a><img src="images/2-2.png"></a>
+                <a><img src="images/3-3.png"></a>
+                <a><img src="images/4-4.png"></a>
+                <a><img src="images/5-5.png"></a>
+                <a><img src="images/6-6.png"></a>
+                <a><img src="images/7-7.png"></a>
+                <a><img src="images/1-1.png"></a>
+                <a><img src="images/2-2.png"></a>
+                <a><img src="images/3-3.png"></a>
+                <a><img src="images/4-4.png"></a>
+                <a><img src="images/5-5.png"></a>
+                <a><img src="images/6-6.png"></a>
+                <a><img src="images/7-7.png"></a>
+      
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      
+      </div>
+      <br>
+      <img src="images/bg_block.png" style="background-repeat:repeat-x;">
+    <div class='container border-color'>
+  
+        <div class='row align-items-center'>
+            <div class=' mb-4 mr-8 mt-7 col-xs-12 col-sm-6 text-center text-white'>
+<br><br>
+         <p style="font-family: Nhas; font-size: 220px; color: white;margin-top: -5%;"  class="text_shadows"> 100 </p>
+         <p style="font-family: Nhas; font-size: 75px; color: white; margin-top: -110px;" class="text_shadows">Joko baino</p>
+         <p style="font-family: Nhas; font-size: 100px; color: white; margin-top: -70px;margin-bottom: 50px;" class="text_shadows">gehiago</p>
+                
+            </div>
+            <div class='mb-4   mt-4 col-xs-12 col-sm-6 text-center text-white mx-auto d-block'>
+              
+              <img src="images/mario_yoshi.png" style="max-width: 480px;"  >
+            
+            </div>
+        </div>
+        <div class='container border border-white border-5' >
+  
+          <div class='row align-items-center'>
+              <div class=' mb-4 mt-4 col-xs-12 col-sm-6 text-center text-white'>
+  
+                <img src="images/Block.png" style="max-width: 430px;"  >
+              </div>
+              
+              <div class='mb-4 mt-4 col-xs-12 col-sm-6 text-white mx-auto d-block'>
+                
+                <h2 style="font-family: Nhas; font-size: 100px; color: white;">Gure katalogoa.</h2>
+              <br>
+              </div>
+          </div>
+          <script>
+  
+            function Salduena(){
+              
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+        
+                if (xhr.readyState == 4 && xhr.status == 200)
+                {
+                    var array = new Array();
+                    array = JSON.parse(xhr.responseText);
+                   
+                    var txt="";//string , karaktere kate bat
+                    for (var x=0;x<array.length;x++)
+                    {
+                        txt += "<a href='/produktuak/?id="+array[x].id+"'><img src='images/"+array[x].id+"_produktua.png' style='max-width: 250px;'></a> <br> <br> <h1 style='font-size: 60px;font-family:Nhas;'>"+array[x].produktu_izena+"</h1>  <h3 style='font-family:Nhas;font-size:30px;color:white;'>"+ array[x].prezioa+" &euro;</h3>";
+                        
+                        document.getElementById("texto").innerHTML = txt;
+                    }
+                }
+            }
+           
+                xhr.open("GET", "select_salduena.php", true);
+                xhr.send();
+            }
+
+            
+            </script>
+          
+          <div class='row'>
+            <div class=' mb-5 pt-5 col-xs-12 col-sm-6 text-center text-white border-end'> 
+              <H1>Salduena</H1>
+              <br>
+            <div style="text-align: center;" id="texto"></div>
+            <br>
+          </div>
+          <div class='  col-xs-12 col-sm-6 text-center text-white'>
+           
+            <img src="images/584df3956a5ae41a83ddee07.png" style="max-width: 250px;">
+            <h1>Produktu gehiago <br> ikusi</h1>
+            <BR>
+            <button onclick="window.location.href='/produktuak'">EGIN KLIK HEMEN</button>
+            <br> <br>
+          </div>
+
+            <!-- <div class=' mb-4 mt-4 pt-5 col-xs-12 col-sm-3 text-center text-white '>
+
+              <img src="images/3dword.png">
+              <h1>31,99 &euro;</h1>
+            </div>
+            
+            <div class='mb-4 mt-4 pt-5 col-xs-12 col-sm-3 text-white mx-auto d-block text-center '>
+              
+              <img src="images/wii_u.png">
+              <h1> 31,99 &euro;</h1>
+            </div>
+            <div class=' mb-4 mt-4 pt-5 col-xs-12 col-sm-3 text-center text-white'>
+
+                <img src="images/supermario_maker.png">
+                <h1>31,99 &euro;</h1>
+            </div>
+          
+            <div class='mb-4 mt-4  pt-5 col-xs-12 col-sm-3 text-white text-center mx-auto d-block'>
+              
+              <img src="images/mario_deluxe_u.png">
+              <h1>31,99 &euro;</h1>
+            </div> -->
+        </div>
+        </div>
+        
+
+        <br>
+        <br>
+        
+        
+          <div class='container border-color'>
+  
+            <div class='row '>
+                <div class=' mb-4 mt-7 col-xs-12 col-sm-4 text-center text-white '>
+                  <img src="images/Goomba_Tower.png" style="width: auto;">
+                </div>
+                <div class='mb-4   mt-4 col-xs-12 col-sm-8  text-white mx-auto d-block'>
+                   <h1>
+                  Azken jokoa
+                </h1>
+                <hr style="border: 5px solid white;">
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/OPAQA_P_RQY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br><br>
+                    <h1>Jokatzeko modu asko
+                </h1>
+                <hr style="border: 5px solid white;">
+              <div class="plata">
+                <img src="images/Nintendo_switch_logo.png">
+                <img src="images/Nintendo-Wii-U-Logo.png">
+                <img src="images/wii.png">
+                <img src="images/Nintendo_3ds_logo.svg.png">
+                <img src="images/nintendo ds.png">
+                
+              </div>
+             <br>
+                <h1>Guri buruz</h1>
+                <hr style="border: 5px solid white;">
+                <h5>"Super Mario" bideo-jokoaren sektoreari eskainitako online denda bat gara duela 19 urte baino gehiagotik.
+                  Gure enpresa gure bezeroei deskontu handiagoei eta tratu pertsonalizatu hobeei dagokienez zerbait gehiago eskaintzeko asmoz sortu zen, eta, batez ere, gure bezeroak guretzat garrantzitsuenak direla da gehien ezaugarritzen gaituena. Gure webgunearen erosketekin pozik egotea da gure bezeroei helarazi nahi dieguna.</h5>
+                
+                <br>
+                <h4>Gure kokapena</h4>
+                <hr style="border: 2px solid white; width: 200px;">
+                <h5>Av. Madariaga, 58-60, </h5>
+               
+                <h5>48014 Bilbao, Vizcaya</h5>
+                <a href="https://www.google.es/maps/dir//Av.+Madariaga,+58-60,+48014+Bilbao,+Vizcaya/@43.2706738,-2.9580689,19.5z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd4e5040759a2c4b:0x23f1af9cb2a5799!2m2!1d-2.9576105!2d43.2706348" target="_blank" style="text-decoration: none; color: rgb(255, 255, 255);">Nola heldu bertara </a>
+              
+                <div class="pegi">
+                  <img src="images/pegi.png">
+                </div>
+              </div>
+            </div>
+          </div>
+</div>
+<img src="../images/footer_bg3.png" usemap="#image-map">
+
+<map name="image-map">
+    <area target="" alt="" title="" href="../mario/" coords="938,28,865,113" shape="rect">
+</map>
+        
+        <script>
+        document.addEventListener('DOMContentLoaded',function(event){
+          // array with texts to type in typewriter
+          var dataText = [ "Gure <br> katalogoa."];
+          
+          // type one text in the typwriter
+          // keeps calling itself until the text is finished
+          function typeWriter(text, i, fnCallback) {
+            // chekc if text isn't finished yet
+            if (i < (text.length)) {
+              // add next character to h1
+             document.querySelector("h2").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+        
+              // wait for a while and call this function again for next character
+              setTimeout(function() {
+                typeWriter(text, i + 1, fnCallback)
+              }, 100);
+            }
+            // text finished, call callback if there is a callback function
+            else if (typeof fnCallback == 'function') {
+              // call callback after timeout
+              setTimeout(fnCallback, 700);
+            }
+          }
+          // start a typewriter animation for a text in the dataText array
+           function StartTextAnimation(i) {
+             if (typeof dataText[i] == 'undefined'){
+                setTimeout(function() {
+                  StartTextAnimation(0);
+                }, 20000);
+             }
+             // check if dataText[i] exists
+            if (i < dataText[i].length) {
+              // text exists! start typewriter animation
+             typeWriter(dataText[i], 0, function(){
+               // after callback (and whole text has been animated), start next text
+               StartTextAnimation(i + 1);
+             });
+            }
+          }
+          // start the text animation
+          StartTextAnimation(0);
+        });
+      </script>
+        <!-- <div class='row'>
+            <div class=' mb-4 mt-4 col-xs-12 col-sm-6 text-centertext-white'>
+
+           <!-- <div class="section section-red"><div class="wrapper"><div class="lines w-clearfix"><h3 class="header header-medium color-white is-larger lines-header">Gure Katalogoa</h3></div><br><p class="services-body"><a href="#" data-w-id="62cbcded-bc48-b1e4-18b4-963229680859" class="services-link">Storyboarding.</a> <a href="#" data-w-id="220062f7-4e22-2202-8ad7-c4beaa7dbdf9" class="services-link">Art Direction.</a> ‍<a href="#" data-w-id="06e0f426-ef6e-24d2-bc04-7e51d60b28aa" class="services-link">Creative Direction.</a> <a href="#" data-w-id="1f29b2ee-8148-8cfd-4edf-fbdd0027ad1d" class="services-link">Sound Design.</a> <a href="#" data-w-id="79f76b12-4901-09d6-70e7-c1c9e8c002d7" class="services-link">Film.</a> <a href="#" data-w-id="b65b413b-ac9c-4c4c-101f-9190158d8334" class="services-link">Editing.</a> <a href="#" data-w-id="a0f3beb3-5259-33b5-bc33-25fd1b8877a0" class="services-link">Post Production.</a> <a href="#" data-w-id="ba4f4d15-a8f9-432a-1cb5-693bfa677917" class="services-link">Illustration.</a> <a href="#" data-w-id="e32f6972-92e0-b901-789b-af743db6ee77" class="services-link">2D Animation.</a> <a href="#" data-w-id="5a7e2517-7ee0-969f-28dd-37b7d145f2aa" class="services-link">3D Animation.</a> <a href="#" data-w-id="1eb36ff7-b505-c76e-4bfd-e7e25a278615" class="services-link">UI&nbsp;Animation.</a> <a href="#" data-w-id="5fe8a11b-faaa-c2f4-28eb-ea22dab6511c" class="services-link">Product Rendering.</a> <a href="#" data-w-id="5e324b63-b4e2-8aba-aef6-0bc1ab7d5f99" class="services-link">Photography.</a> <a href="#" data-w-id="6da63ae8-266a-42f6-ce79-ac2ddfa16e85" class="services-link">Storyboarding.</a> <a href="#" data-w-id="6c15dba7-a810-89ef-e20f-ba8c4079d416" class="services-link">Art Direction.</a> <a href="#" data-w-id="ddb01e53-b2b7-05c0-eb1e-7deb82185bc6" class="services-link">Creative Direction.</a> <a href="#" data-w-id="669006e7-af8d-5f33-a8f8-acfb820129b0" class="services-link">Sound Design.</a> <a href="#" data-w-id="40e9a690-66a5-4df9-38b6-b7c92eaf4694" class="services-link">Film.</a> <a href="#" data-w-id="b6d4d510-ff6c-2fd2-d404-61a12c0e9f8c" class="services-link">Editing.</a> <a href="#" data-w-id="796f0662-2747-fa04-c810-86c1836da2b2" class="services-link">Post Production.</a> <a href="#" data-w-id="199fb8aa-2ebb-8c9a-3748-60e92b9de807" class="services-link">Illustration.</a> <a href="#" data-w-id="087680bb-0f41-ce36-f9d1-3168d5a71a42" class="services-link">2D Animation.</a> <a href="#" data-w-id="fa0f1544-fe53-f8b9-76e2-1e6802620697" class="services-link">3D Animation.</a> <a href="#" data-w-id="de37f7d7-0e5b-dba8-7a44-9682c378265d" class="services-link">UI Animation.</a> <a href="#" data-w-id="b11105c1-68d3-cee8-fcfa-b46b8808d0c4" class="services-link">Product Rendering.</a> <a href="#" data-w-id="381813ee-5726-7428-db39-08930e2b4166" class="services-link">Photography.</a> <a href="#" data-w-id="4524f248-181e-d713-15f4-fe7dc4b1652f" class="services-link">Creative Direction.</a> <a href="#" data-w-id="d16bdefd-ec53-6354-0379-a6659b2f73af" class="services-link">Storyboarding. </a><a data-w-id="4bcccc8a-3e8a-b539-5cdb-762b337f76eb" href="#" class="services-link">Art Direction. </a><a data-w-id="b03369ff-2709-32bf-577a-0f055532cd5f" href="#" class="services-link">Sound Design. </a><a data-w-id="a2727f0e-72bb-dc6b-4122-b90ab03c8827" href="#" class="services-link">Film.</a> <a data-w-id="fa17dfd5-fcf6-d6b0-1d13-4ebbd2fe2e87" href="#" class="services-link">Editing.</a> <a data-w-id="2493e452-5bd5-cd91-3c29-cd634ac98ba4" href="#" class="services-link"><img src="images/katalogoa.png"></a></p></div></div> -->
+<!-- wet3ye -->
+                
+            <!-- </div>
+            <div class=' mb-4 col-xs-12 col-sm-6 text-center  text-white' id="escaleras">
+              sdef
+              <div class="text__container">
+                <div class="mexiwave" data-splitting="">mexiwave</div>
+              </div>
+                  </li>
+                </ul>
+                
+            </div>
+        </div> -->
+  
+  <!-- <div class="panels">
+    <section class="panel">
+      <div class="panel-content">
+        <img src="images/online_dena.png" style="width: 80%;padding-left: 1%;">
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.</p>
+      </div>
+    </section>
+    <section class="panel">
+      <div class="panel-content">
+        <h2>Slide 2 Section Wipe</h2>
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.</p>
+      </div>
+    </section>
+  </div> -->
+  <!-- <div class="section section-red"><div class="wrapper"><div class="lines w-clearfix"><h3 class="header header-medium color-white is-larger lines-header">Gure Katalogoa</h3></div><br><p class="services-body"><a href="#" data-w-id="62cbcded-bc48-b1e4-18b4-963229680859" class="services-link">Storyboarding.</a> <a href="#" data-w-id="220062f7-4e22-2202-8ad7-c4beaa7dbdf9" class="services-link">Art Direction.</a> ‍<a href="#" data-w-id="06e0f426-ef6e-24d2-bc04-7e51d60b28aa" class="services-link">Creative Direction.</a> <a href="#" data-w-id="1f29b2ee-8148-8cfd-4edf-fbdd0027ad1d" class="services-link">Sound Design.</a> <a href="#" data-w-id="79f76b12-4901-09d6-70e7-c1c9e8c002d7" class="services-link">Film.</a> <a href="#" data-w-id="b65b413b-ac9c-4c4c-101f-9190158d8334" class="services-link">Editing.</a> <a href="#" data-w-id="a0f3beb3-5259-33b5-bc33-25fd1b8877a0" class="services-link">Post Production.</a> <a href="#" data-w-id="ba4f4d15-a8f9-432a-1cb5-693bfa677917" class="services-link">Illustration.</a> <a href="#" data-w-id="e32f6972-92e0-b901-789b-af743db6ee77" class="services-link">2D Animation.</a> <a href="#" data-w-id="5a7e2517-7ee0-969f-28dd-37b7d145f2aa" class="services-link">3D Animation.</a> <a href="#" data-w-id="1eb36ff7-b505-c76e-4bfd-e7e25a278615" class="services-link">UI&nbsp;Animation.</a> <a href="#" data-w-id="5fe8a11b-faaa-c2f4-28eb-ea22dab6511c" class="services-link">Product Rendering.</a> <a href="#" data-w-id="5e324b63-b4e2-8aba-aef6-0bc1ab7d5f99" class="services-link">Photography.</a> <a href="#" data-w-id="6da63ae8-266a-42f6-ce79-ac2ddfa16e85" class="services-link">Storyboarding.</a> <a href="#" data-w-id="6c15dba7-a810-89ef-e20f-ba8c4079d416" class="services-link">Art Direction.</a> <a href="#" data-w-id="ddb01e53-b2b7-05c0-eb1e-7deb82185bc6" class="services-link">Creative Direction.</a> <a href="#" data-w-id="669006e7-af8d-5f33-a8f8-acfb820129b0" class="services-link">Sound Design.</a> <a href="#" data-w-id="40e9a690-66a5-4df9-38b6-b7c92eaf4694" class="services-link">Film.</a> <a href="#" data-w-id="b6d4d510-ff6c-2fd2-d404-61a12c0e9f8c" class="services-link">Editing.</a> <a href="#" data-w-id="796f0662-2747-fa04-c810-86c1836da2b2" class="services-link">Post Production.</a> <a href="#" data-w-id="199fb8aa-2ebb-8c9a-3748-60e92b9de807" class="services-link">Illustration.</a> <a href="#" data-w-id="087680bb-0f41-ce36-f9d1-3168d5a71a42" class="services-link">2D Animation.</a> <a href="#" data-w-id="fa0f1544-fe53-f8b9-76e2-1e6802620697" class="services-link">3D Animation.</a> <a href="#" data-w-id="de37f7d7-0e5b-dba8-7a44-9682c378265d" class="services-link">UI Animation.</a> <a href="#" data-w-id="b11105c1-68d3-cee8-fcfa-b46b8808d0c4" class="services-link">Product Rendering.</a> <a href="#" data-w-id="381813ee-5726-7428-db39-08930e2b4166" class="services-link">Photography.</a> <a href="#" data-w-id="4524f248-181e-d713-15f4-fe7dc4b1652f" class="services-link">Creative Direction.</a> <a href="#" data-w-id="d16bdefd-ec53-6354-0379-a6659b2f73af" class="services-link">Storyboarding. </a><a data-w-id="4bcccc8a-3e8a-b539-5cdb-762b337f76eb" href="#" class="services-link">Art Direction. </a><a data-w-id="b03369ff-2709-32bf-577a-0f055532cd5f" href="#" class="services-link">Sound Design. </a><a data-w-id="a2727f0e-72bb-dc6b-4122-b90ab03c8827" href="#" class="services-link">Film.</a> <a data-w-id="fa17dfd5-fcf6-d6b0-1d13-4ebbd2fe2e87" href="#" class="services-link">Editing.</a> <a data-w-id="2493e452-5bd5-cd91-3c29-cd634ac98ba4" href="#" class="services-link"><img src="images/katalogoa.png"></a></p></div></div> -->
+ <!-- <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Kargatzen" data-fw-param="153650/"></script>  -->
+</body> 
+    <script src='rellax.min.js'></script>
+    <script src='index.js'></script>
+
+</html>
