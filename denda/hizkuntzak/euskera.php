@@ -1,0 +1,35 @@
+<?php
+$etiketa_abizena = "Abizena";
+$etiketa_bai = "Bai";
+$etiketa_bezeroaren_datuak = "Bezeroaren datuak";
+$etiketa_bidali = "Bidali";
+$etiketa_datuak_zuzenak_dira = "Datuak zuzenak dira?";
+$etiketa_produktua = "Produktua";
+$etiketa_eguneratu = "Eguneratu";
+$etiketa_emaila = "E-maila";
+$etiketa_eremu_guztiak_bete_behar_dira = "Eremu guztiak bete behar dira";
+$etiketa_eskaria = "Eskaria";
+$etiketa_eskaria_egin = "Eskaria egin";
+$etiketa_eskaria_jaso_da = "Eskaria jaso da, eskerrik asko gure dendan erosteagatik";
+$etiketa_eskaria_ez_da_jaso = "Eskaria ez da jaso";
+$etiketa_eskariaren_datuak = "Eskariaren datuak";
+$etiketa_ez = "Ez";
+$etiketa_ezabatu = "Ezabatu";
+$etiketa_xehetasunak = "Xehetasunak";
+$etiketa_guztira = "Guztira";
+$etiketa_hasiera = "Hasiera";
+$etiketa_helbidea = "Helbidea";
+$etiketa_herria = "Herria";
+$etiketa_id_baliogabea = "Produktuaren identifikadorea baliogabea da";
+$etiketa_izena = "Izena";
+$etiketa_kopurua = "Kopurua";
+$etiketa_pk = "Posta-kodea";
+$etiketa_prezioa = "Prezioa";
+$etiketa_probintzia = "Probintzia";
+$etiketa_produktua = "Produktua";
+$etiketa_produktuak = "Produktuak";
+$etiketa_saskia = "Saskia";
+$etiketa_saskia_hutsik_dago = "Saskia hutsik dago";
+$etiketa_saskira_gehitu = "Saskira gehitu";
+$etiketa_urtea = "Urtea";
+?>
